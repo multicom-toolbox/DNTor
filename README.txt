@@ -1,0 +1,98 @@
+##########################################################################################
+#                                                                                        #
+#   Software   :  DNTor : Deep Learning Methods for Protein Torsion Angle Prediction     #
+#   Release    :  1.1  (October 2016)                                                    #
+#                                                                                        #
+#   Author(s)  :  Haiou Li, Jie Hou                                                      #
+#   Copyright  :  Bioinformatics, Data Mining, and Machine Learning Lab (BDM)            #
+#				  Department of Computer Science                         #
+#				  University of Missouri, Columbia                       #
+#                                                                                        #
+##########################################################################################
+
+
+----------------------------------------------------------------------------
+
+Installation:
+
+	* unzip the DNTor1.0.tar.gz
+	  $ tar -zxvf DNTor1.0.tar.gz
+	  $ cd DNTor
+	
+	* Before proceeding further you must have Perl Installed.
+
+	* perl ./configure.pl <Your installation directory>
+	  $ perl ./configure.pl /home/tool/DNTor
+
+----------------------------------------------------------------------------
+
+Some of the feature generation tools need Non-redundency database, users should copy or download NR database at the following direcoty:
+installation_directory/Methods/Tools/database 
+
+
+* Our lab also provided nr70, nr90, and nr for users to download, please try 
+                             
+   a) nr90: $ wget http://sysbio.rnet.missouri.edu/bdm_download/nr_database/nr90.tar.gz
+            $ tar -zxvf nr90.tar.gz
+
+   b) nr70: $ wget http://sysbio.rnet.missouri.edu/bdm_download/nr_database/nr70.tar.gz
+            $ tar -zxvf nr70.tar.gz
+                         
+   c) nr:   $ wget http://sysbio.rnet.missouri.edu/bdm_download/nr_database/nr.tar.gz
+            $ tar -zxvf nr.tar.gz
+
+Before runing DeepProTa, the following tools must be downloaded and installed at the directoy of installation_directory/Methods/Tools/
+
+1. PSpro 2.0  ->  installation_directory/Methods/Tools/pspro2.0
+   * http://sysbio.rnet.missouri.edu/multicom_toolbox/tools.html
+
+2. predisorder1.1  ->  installation_directory/Methods/Tools/predisorder1.1
+   * http://sysbio.rnet.missouri.edu/multicom_toolbox/tools.html
+
+3. SCRATCH-1D_1.1  ->  installation_directory/Methods/Tools/SCRATCH-1D_1.1/
+   * http://download.igb.uci.edu/
+
+4. AcconPred_package_v1.00  ->  installation_directory/Methods/Tools/AcconPred_package_v1.00
+   * http://ttic.uchicago.edu/~majianzhu/AcconPred_package_v1.00.tar.gz
+
+5. sspro4  ->  installation_directory/Methods/Tools/sspro4
+   * http://download.igb.uci.edu/
+
+6. fragsion  ->  installation_directory/Methods/Tools/fragsion
+   * http://sysbio.rnet.missouri.edu/FRAGSION/
+
+----------------------------------------------------------------------------
+
+================
+Running DNTor:
+================
+
+	cd <Your installation directory>
+	./Scripts/make_DeepProTa_prediction.sh sequence_name sequence_file modeltype(DRNN,DReRBM,DNN,DRBM) output_dir
+
+================
+Running example:
+================
+ 	Test:
+ 	cd /home/jh7x3/DNtor
+
+	a) DRNN:   ./Scripts/make_DeepProTa_prediction.sh 2mnjB /home/jh7x3/DNTor/Inputs/2mnjB.sequence   DRNN   /home/jh7x3/DNTor/Outputs/DRNN_out 
+	b) DReRBM: ./Scripts/make_DeepProTa_prediction.sh 2mnjB /home/jh7x3/DNTor/Inputs/2mnjB.sequence   DReRBM /home/jh7x3/DNTor/Outputs/DReRBM_out  
+	c) DNN:    ./Scripts/make_DeepProTa_prediction.sh 2mnjB /home/jh7x3/DNTor/Inputs/2mnjB.sequence   DNN    /home/jh7x3/DNTor/Outputs/DNN_out
+	d) DRBM:   ./Scripts/make_DeepProTa_prediction.sh 2mnjB /home/jh7x3/DNTor/Inputs/2mnjB.sequence   DRBM   /home/jh7x3/DNTor/Outputs/DRBM_out
+    
+  	The results store at ./Outputs/DNN_out/2mnjB.fea_11
+
+----------------------------------------------------------------------------
+
+
+If you have questions or suggestions, please contact:        
+		Jianlin Cheng, PhD
+		Bioinformatics, Data Mining, and Machine Learning Lab (BDM)
+		Department of Computer Science
+		University of Missouri, Columbia
+		Email: chengji@missouri.edu
+
+
+Citation: Deep Learning Methods for Protein Torsion Angle Prediction,2016. Submitted.
+================================================================================================
