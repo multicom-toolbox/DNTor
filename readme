@@ -16,10 +16,11 @@
 Installation:
 
 	* unzip the DNTor1.0.tar.gz
+	  $ tar -zxvf DNTor1.0.tar.gz
 	  $ cd DNTor
-
+	* You must have Perl Installed in order to proceed with the installation
 	* perl ./configure.pl <Your installation directory>
-	  $ ex. perl ./configure.pl /home/tool/DNTor
+	  $ perl ./configure.pl /home/tool/DNTor
 
 ----------------------------------------------------------------------------
 
