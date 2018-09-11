@@ -19,7 +19,16 @@ Please send your questions, feedback and comments to: chengji@missouri.edu.
 
 The software was developed and tested on the RedHat 4.4.7 and ARCH Linux 3.8.11
 
-1). Download the DeepQA tool (DeepQA.tar.gz) at http://sysbio.rnet.missouri.edu/multicom_toolbox/tools.html#license, 
+"NOTE: BEFORE INSTALLATION DOWNLOAD AND INSTALL GitLFS FROM https://git-lfs.github.com/"
+
+1). Download the DeepQA tool (DeepQA.tar.gz) at http://sysbio.rnet.missouri.edu/multicom_toolbox/tools.html#license,
+
+	Use the following command from GitBash:
+
+	$ git lfs clone https://github.com/multicom-toolbox/DNTor
+
+	This will copy all the contents in the ../DNTor folder including the zipped "DeepQA_package.tar.gz" file. You can directly unzip and configure the 	software using steps 2 and 3 (if so please delete the rest of the folders and files other than the "DeepQA_package.tar.gz" file), or, you may 	directly configure using step 3 (in that case you may delete the "DeepQA_package.tar.gz" file).
+ 
 	The DeepQA tool includes:
 	--------------------------------------------
 	Name                Size          Size
@@ -33,7 +42,7 @@ The software was developed and tested on the RedHat 4.4.7 and ARCH Linux 3.8.11
 
 	TOTAL          ~5.80   GB        ~2.00  GB
 	--------------------------------------------
-2). Unzip DeepQA_pacage.tar.gz
+2). Unzip DeepQA_package.tar.gz
 	$ tar -zxvf DeepQA_package.tar.gz
 
 3). Go to the DeepQA folder, run the configure file
