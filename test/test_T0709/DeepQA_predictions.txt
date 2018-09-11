@@ -1,0 +1,6 @@
+server03_TS1	0.64157
+server04_TS1	0.65402
+server01_TS1	0.62495
+server02_TS1	0.67492
+server05_TS1	0.70553
+server20_TS1	0.65512
